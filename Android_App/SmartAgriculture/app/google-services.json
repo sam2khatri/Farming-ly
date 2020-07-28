@@ -1,0 +1,143 @@
+{
+  "project_info": {
+    "project_number": "890979473045",
+    "firebase_url": "https://management-fbe22.firebaseio.com",
+    "project_id": "management-fbe22",
+    "storage_bucket": "management-fbe22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890979473045:android:8f23029bd57d4747922d9c",
+        "android_client_info": {
+          "package_name": "com.example.agriculturemanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890979473045-gu5munm5tug8gr3v8m8utaejvdpjhcpv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.agriculturemanagement",
+            "certificate_hash": "cd616422b313e4b94b18506217824a1bff1477e8"
+          }
+        },
+        {
+          "client_id": "890979473045-5k2s9kiaqojv02rd19qm3a4jip60f67d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZArRL3NrLPRM4Gvf7Gl0ZkuJC4MMWSB8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890979473045-5k2s9kiaqojv02rd19qm3a4jip60f67d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890979473045:android:baa3f682e52aef42922d9c",
+        "android_client_info": {
+          "package_name": "com.example.farmingly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890979473045-4kt6md8kct2k7ch92f162fj7nkclv5om.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.farmingly",
+            "certificate_hash": "1f082f271431b87b63bd1ad2aaa7af3d2dec21da"
+          }
+        },
+        {
+          "client_id": "890979473045-5k2s9kiaqojv02rd19qm3a4jip60f67d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZArRL3NrLPRM4Gvf7Gl0ZkuJC4MMWSB8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890979473045-5k2s9kiaqojv02rd19qm3a4jip60f67d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890979473045:android:42271ef817fcb3c1922d9c",
+        "android_client_info": {
+          "package_name": "com.example.mysmartapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890979473045-5k2s9kiaqojv02rd19qm3a4jip60f67d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZArRL3NrLPRM4Gvf7Gl0ZkuJC4MMWSB8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890979473045-5k2s9kiaqojv02rd19qm3a4jip60f67d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890979473045:android:ac3667e16b04ee06922d9c",
+        "android_client_info": {
+          "package_name": "com.example.smartagriculture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890979473045-5k2s9kiaqojv02rd19qm3a4jip60f67d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZArRL3NrLPRM4Gvf7Gl0ZkuJC4MMWSB8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890979473045-5k2s9kiaqojv02rd19qm3a4jip60f67d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

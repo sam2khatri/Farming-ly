@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+<script type="text/javascript">
+  
+   var firebaseConfig = {
+    apiKey: "AIzaSyAXdcDqL3S6j-rYsgidwGPQXVWGKv0FrWM",
+    authDomain: "management-fbe22.firebaseapp.com",
+    databaseURL: "https://management-fbe22.firebaseio.com",
+    projectId: "management-fbe22",
+    storageBucket: "management-fbe22.appspot.com",
+    messagingSenderId: "890979473045",
+    appId: "1:890979473045:web:d496e5f0cd029124922d9c"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  var database = firebase.database();
+  var dataRef= database.ref("users/18DCS035/sensorData");
+  
+  function startData(){
+  	dataRef.on('value',getData,errData);  	
+  }
+   
+  function getData(data){
+  	var sensorData = data.val();
+  	var keys = Object.keys(sensorData);
+  	var values = Object.values(sensorData); 
+  	console.log(keys);
+  	document.getElementById('hum').innerHTML=values[0];
+  	document.getElementById('temp').innerHTML=values[3];
+  	document.getElementById('ldr').innerHTML=values[1];
+  	document.getElementById('soil').innerHTML=values[2];
+
+  }
+  //var id = '-KVKnwa-MsPXzNbNHdmK';
+  function errData(err){
+  	console.log("Error!"+err);
+  }
+  function writeUserData(userId, name, email) {
+  firebase.database().ref('users/' + userId).set({
+    username: name,
+    email: email,
+  });
+  firebase.database().ref('users/'+userId+'/sensorData/').set({
+  	ldrStatus: "No Light",
+  	temp: 25,
+  	hum: 47,
+  	soilMoisture:100
+  });
+}
+</script>
+<style type="text/css">
+	table{
+		border-collapse: collapse;
+		border: 2px solid black;
+	}
+	th, td{
+		height: 50px;
+		width: 50px;
+		padding: 20px;
+		border: 1px solid black;
+		vertical-align: middle;
+	}
+</style>
+</head>
+<body>
+	<button onclick="startData()">Start</button>
+	<br>
+	<table id="myTable">
+		<tr>
+			<td>Humidity</td>
+			<td id="hum"></td>
+		</tr>	
+		<tr>
+			<td>Temperature</td>
+			<td id="temp"></td>
+		</tr>
+		<tr>
+			<td>Light</td>
+			<td id="ldr"></td>
+		</tr>
+		<tr>
+			<td>Soil Moisture</td>
+			<td id="soil"></td>
+		</tr>
+	</table>
+	<br>
+	<button onclick="writeUserData('18DCS035','Samaksh','samakshhatei14@gmail.com')">Push Data</button>
+</body>
+</html>
