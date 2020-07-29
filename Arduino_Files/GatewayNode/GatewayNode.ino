@@ -28,8 +28,8 @@
 
 // Setting Global Variables ----------------------------------------------------------------------------------------------------------------------------
 
-#define FIREBASE_HOST "https://smart-agriculture-99ad9.firebaseio.com"        //Link and Secret Key for Firebase Authentication
-#define FIREBASE_AUTH "kQw4Jed7Y1o1Si3X7QeCLJR3tNnlY3g2hGBQtjH4"
+#define FIREBASE_HOST "FIREBASE_LINK"        //Link and Secret Key for Firebase Authentication
+#define FIREBASE_AUTH "FIREBASE_KEY"
 
 const char* APssid = "ESP8266-Access-Point";       //Credentials for Access POint
 const char* APpassword = "123456789";
@@ -164,22 +164,22 @@ byte sendEmail(String sensor_data)
     return 0;
 
   Serial.println(F("Sending User"));                      //Sending Username of SMTP2GO account
-  espClient.println("MThkY3MwMzVAY2hhcnVzYXQuZWR1Lmlu");           // Encoded Username in Base64 format. You can calculate it from base64encoded.org  
+  espClient.println("your_sender_email");           // Encoded Username in Base64 format. You can calculate it from base64encoded.org  
   if (!emailResp())
     return 0;
 
   Serial.println(F("Sending Password"));
-  espClient.println("aGFwcHlBNjA0IQ==");                  //Encoded Password in Base64 Format
+  espClient.println("your_password");                  //Encoded Password in Base64 Format
   if (!emailResp())
     return 0;
 
   Serial.println(F("Sending From"));
-  espClient.println(F("MAIL From: 18dcs035@charusat.edu.in")); // Enter Sender Mail Id. DON'T FORGET TO CHANGE THE EMAIL ADDRESS
+  espClient.println(F("MAIL From: sender@example.com")); // Enter Sender Mail Id. DON'T FORGET TO CHANGE THE EMAIL ADDRESS
   if (!emailResp())
     return 0;
 
   Serial.println(F("Sending To"));
-  espClient.println(F("RCPT To: samakshkhatri14@gmail.com")); // Enter Receiver Mail Id. DON'T FORGET TO CHANGE THE EMAIL ADDRESS
+  espClient.println(F("RCPT To: receiver@example.com")); // Enter Receiver Mail Id. DON'T FORGET TO CHANGE THE EMAIL ADDRESS
   if (!emailResp())
     return 0;
 
@@ -189,8 +189,8 @@ byte sendEmail(String sensor_data)
     return 0;
 
   Serial.println(F("Sending email"));
-  espClient.println(F("To:  samakshkhatri14@gmail.com"));    // Enter Receiver Mail Id. DON'T FORGET TO CHANGE THE EMAIL ADDRESS
-  espClient.println(F("From: 18dcs035@charusat.edu.in"));    // Enter Sender Mail Id. DON'T FORGET TO CHANGE THE EMAIL ADDRESS
+  espClient.println(F("To:  receiver@example.com"));    // Enter Receiver Mail Id. DON'T FORGET TO CHANGE THE EMAIL ADDRESS
+  espClient.println(F("From: sender@example.com"));    // Enter Sender Mail Id. DON'T FORGET TO CHANGE THE EMAIL ADDRESS
   espClient.println(F("Subject: Sensor Status\r\n"));
   espClient.println(sensor_data);
   espClient.println(F("."));
