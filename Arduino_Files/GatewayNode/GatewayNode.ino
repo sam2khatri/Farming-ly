@@ -31,10 +31,10 @@
 #define FIREBASE_HOST "FIREBASE_LINK"        //Link and Secret Key for Firebase Authentication
 #define FIREBASE_AUTH "FIREBASE_KEY"
 
-const char* APssid = "ESP8266-Access-Point";       //Credentials for Access POint
-const char* APpassword = "123456789";
-const char* ssid = "Khatri";                      //Credentials for connecting to a WiFi
-const char* password = "sameep18";
+const char* APssid = "AP_SSID";       //Credentials for Access POint
+const char* APpassword = "AP_PASSWD";
+const char* ssid = "SSID";                      //Credentials for connecting to a WiFi
+const char* password = "PASSWD";
 
 char smtp_server[] = "mail.smtp2go.com";          // The SMTP Server
 String message="";                                //Global String variable to store data from sensor nodes
