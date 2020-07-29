@@ -77,22 +77,22 @@ byte sendEmail()
     return 0;
 
   Serial.println(F("Sending User"));
-  espClient.println("MThkY3MwMzVAY2hhcnVzYXQuZWR1Lmlu"); // Your encoded Username
+  espClient.println(""); // Your encoded Username
   if (!emailResp())
     return 0;
 
   Serial.println(F("Sending Password"));
-  espClient.println("aGFwcHlBNjA0IQ==");// Your encoded Password
+  espClient.println("");// Your encoded Password
   if (!emailResp())
     return 0;
 
   Serial.println(F("Sending From"));
-  espClient.println(F("MAIL From:18dcs035@charusat.edu.in")); // Enter Sender Mail Id
+  espClient.println(F("MAIL From:")); // Enter Sender Mail Id
   if (!emailResp())
     return 0;
 
   Serial.println(F("Sending To"));
-  espClient.println(F("RCPT To:samakshkhatri14@gmail.com")); // Enter Receiver Mail Id
+  espClient.println(F("RCPT To:")); // Enter Receiver Mail Id
   if (!emailResp())
     return 0;
 
@@ -102,8 +102,8 @@ byte sendEmail()
     return 0;
 
   Serial.println(F("Sending email"));
-  espClient.println(F("To:  samakshkhatri14@gmail.com")); // Enter Receiver Mail Id change to your address
-  espClient.println(F("From: 18dcs035@charusat.edu.in")); // Enter Sender Mail Id
+  espClient.println(F("To:  ")); // Enter Receiver Mail Id change to your address
+  espClient.println(F("From: ")); // Enter Sender Mail Id
   espClient.println(F("Subject: LDR Status\r\n"));
  // espClient.println(status());
   espClient.println(temp());
